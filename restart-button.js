@@ -28,7 +28,7 @@ let jdmQuestions = [
   {
     question: "¿Cuál es el nombre japonés para el Subaru Impreza WRX STI?",
     answers: ["Levorg", "Forester", "Legacy", "Goburiion"],
-    correctAnswer: 3
+    correctAnswer: 0
   },
 ];
 
