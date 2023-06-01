@@ -1,0 +1,80 @@
+<html>
+
+    <head>
+        <title>Car Show</title>
+        <meta name="description" content="Build your own planetarium with A-frame">
+        <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+        <script src="https://unpkg.com/aframe-animation-component@^5.1.2/dist/aframe-animation-component.min.js"></script>
+
+
+
+        <!-- this includes our restart-button component from the restart-button
+        file -->
+        <script src="/restart-button.js"></script>
+
+
+    </head>
+
+    <body>
+        <a-scene>
+
+            <a-mixin id="rotation" animation="property: rotation; loop: true; from:  0 0 0; to: 0 360 0; dur: 50000; easing: linear; pauseEvents: pauseOrbit; resumeEvents: startOrbit"></a-mixin>
+
+            <!-- adding a cursor for look controls-->
+            <a-asset>
+                <a-asset-item id = "carModel" src = "Assets/Nissan/scene.gltf" ></a-asset-item>
+                <a-asset-item id = "carModel2" src = "Assets/Mazda/scene.gltf" ></a-asset-item>
+            </a-asset>
+            <a-entity position="0 -1 7">
+                <a-camera camera>
+                    <a-cursor material="color: #e63946;"></a-cursor>
+                </a-camera>
+            </a-entity>
+
+
+            <!-- adding start and stop buttons-->
+            <a-entity pause-button position="-5 5 0" geometry="primitive: plane; width: 10; height: auto" material="color: #1d3557;"
+                text="zOffset: .005; wrapCount: 25; align: center; value: \n Pausar Rotacion
+                \n ">
+            </a-entity>
+
+            <a-entity restart-button position="0 -3 0" geometry="primitive: plane; width: 10; height: auto" material="color: #457b9d;"
+                text="zOffset: .005; wrapCount: 25; align: center; value: \n Continuar Rotacion
+                \n ">
+            </a-entity>
+
+            <!-- Add the button pregunta -->
+            <a-entity question-button position="5 5 0" geometry="primitive: plane; width: 10; height: auto" material="color: #14213d;"
+            text="zOffset: .005; wrapCount: 25; align: center; value: \n cuestionario 
+            \n ">
+            </a-entity>
+
+
+            <a-sky color="#e9edc9"></a-sky>
+            <!-- <a-sphere id="star" position="0 0 0" radius="4" mixin="rotation" star-shader handle-events></a-sphere>s -->
+
+            <a-entity gltf-model="#carModel" id="star" position="-2.7 0 0" mixin="rotation" class="rotation" scale="1.5 1.5 1.5">
+                <!-- Add a round floor -->
+                <a-entity position="0 -0.24 0">
+                    <a-circle radius="1.8" color="#344e41" rotation="-90 0 0"></a-circle>
+                </a-entity>
+            </a-entity>
+            
+            <a-entity gltf-model="#carModel2" id="star" position="2.7 -0.3 0" mixin="rotation" class="rotation">
+                <!-- Add a round floor -->
+                <a-entity position="0 -0.05 0">
+                    <a-circle radius="2.5" color="#344e41" rotation="-90 0 0"></a-circle>
+                </a-entity>
+            </a-entity>
+
+
+        </a-scene>
+
+
+        <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+        <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+        <script src="https://button.glitch.me/button.js"></script>
+    </body>
+
+</html>
