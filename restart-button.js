@@ -6,7 +6,7 @@ let answerEntities = []; // Array to store answer entities
 // Array of questions and related answers about JDM cars
 let jdmQuestions = [
   {
-    question: "¿Cuál es el modelo de Honda conocido como 'Type R'?",
+    question: "¿Cual es el modelo de Honda conocido como 'Type R'?",
     answers: ["Civic", "Accord", "Fit", "Prelude"],
     correctAnswer: 0
   },
@@ -16,17 +16,17 @@ let jdmQuestions = [
     correctAnswer: 1
   },
   {
-    question: "¿Cuál es el legendario auto de drift de Toyota?",
+    question: "¿Cual es el legendario auto de drift de Toyota?",
     answers: ["Supra", "MR2", "GT86", "Soarer"],
     correctAnswer: 2
   },
   {
-    question: "¿Qué motor se encuentra en el Mazda RX-7 FD?",
+    question: "¿Que motor se encuentra en el Mazda RX-7 FD?",
     answers: ["2JZ-GTE", "SR20DET", "13B-REW", "RB26DETT"],
     correctAnswer: 2
   },
   {
-    question: "¿Cuál es el nombre japonés para el Subaru Impreza WRX STI?",
+    question: "¿Cual es el nombre japonés para el Subaru Impreza WRX STI?",
     answers: ["Levorg", "Forester", "Legacy", "Goburiion"],
     correctAnswer: 0
   },
